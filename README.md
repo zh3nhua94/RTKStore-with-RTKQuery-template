@@ -29,21 +29,13 @@ Follow these steps to set up the project:
 
 src/
 
-├── components/
-
-│   ├── PostsList.js
-
-│   └── ...
-
-├── features/
-
-│   ├── posts/
-
-│   │   ├── postsApiSlice.js
-
-│   │   ├── postsSlice.js
-
-│   └── store.js
+- components/
+   - PostsList.js
+- features/
+   - posts/
+      - postsApiSlice.js
+      - postsSlice.js
+   - store.js
 
 
 
