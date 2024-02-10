@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# Redux Toolkit (RTK) Store and RTK Query Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a basic template for setting up a Redux store using Redux Toolkit (RTK) and integrating RTK Query for API data fetching in a React application.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Follow these steps to set up the project:
 
-## Expanding the ESLint configuration
+1. **Clone the Repository:** Clone this repository to your local machine.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **Install Dependencies:** Run `npm install` or `yarn install` to install the required dependencies.
 
-- Configure the top-level `parserOptions` property like this:
+3. **Set Up Redux Store:**
+   - Create a Redux store using Redux Toolkit (RTK). You can create reducers and actions using the `createSlice` utilities provided by RTK.
+   - Export the store instance to use it in your application.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+4. **Integrate RTK Query:**
+   - Use RTK Query to fetch data from APIs. Define API endpoints and queries using the `createApi` and `createAsyncThunk` utilities provided by RTK Query.
+   - Configure the API slice with a base URL and any other necessary settings.
+   - Use the generated hooks (e.g., `useGetPostsQuery`) in your components to fetch data from the API.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+5. **Set Up Components:**
+   - Create React components to render UI elements.
+   - Use Redux hooks such as `useSelector` and `useDispatch` to access the Redux store and dispatch actions.
+
+6. **Start the Demo Server:** Run `npm run server` and then `npm run dev` to start the development server and view the application in your browser.
+
+## Folder Structure
+src/
+├── components/
+│   ├── PostsList.js
+│   └── ...
+├── features/
+│   ├── posts/
+│   │   ├── postsApiSlice.js
+│   │   ├── postsSlice.js
+│   └── store.js
+
+
