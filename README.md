@@ -26,14 +26,24 @@ Follow these steps to set up the project:
 6. **Start the Demo Server:** Run `npm run server` and then `npm run dev` to start the development server and view the application in your browser.
 
 ## Folder Structure
+
 src/
+
 ├── components/
+
 │   ├── PostsList.js
+
 │   └── ...
+
 ├── features/
+
 │   ├── posts/
+
 │   │   ├── postsApiSlice.js
+
 │   │   ├── postsSlice.js
+
 │   └── store.js
+
 
 
